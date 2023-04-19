@@ -20,7 +20,7 @@ namespace Consumer
         public Task Consume(ConsumeContext<Message> context)
         {
             _logger.LogInformation($"Received Text: {context.Message.Value}, id: {context.MessageId}");
-            //throw new Exception("test");
+            throw new Exception("test");
             return Task.CompletedTask;
         }
     }
